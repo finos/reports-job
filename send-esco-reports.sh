@@ -1,9 +1,10 @@
 #!/bin/bash
 # Only run the build if it was triggered by Travis CI's cron facility
-if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
-    echo "This build was not triggered by cron - skipping."
-    exit 0
-fi
+# ####TEST COMMENTED OUT DURING TESTING OF TRAVIS SETUP!!!!
+#if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
+#    echo "This build was not triggered by cron - skipping."
+#    exit 0
+#fi
 
 # Check that we have all the necessary env vars (configured in .travis.yml)
 declare -a vars=(GITHUB_USER GITHUB_TOKEN JIRA_USER JIRA_PASSWORD BITERGIA_USER BITERGIA_PASSWORD SMTP_USER SMTP_PASSWORD ESCO_EMAIL_ADDRESS)

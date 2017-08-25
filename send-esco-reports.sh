@@ -7,7 +7,7 @@
 #fi
 
 # Check that we have all the necessary env vars (configured in .travis.yml)
-declare -a vars=(GITHUB_USER GITHUB_TOKEN JIRA_USER JIRA_PASSWORD BITERGIA_USER BITERGIA_PASSWORD SMTP_USER SMTP_PASSWORD ESCO_EMAIL_ADDRESS)
+declare -a vars=(GITHUB_USER GITHUB_PASSWORD JIRA_USER JIRA_PASSWORD BITERGIA_USER BITERGIA_PASSWORD SMTP_USER SMTP_PASSWORD ESCO_EMAIL_ADDRESS)
 
 for var_name in "${vars[@]}"
 do
@@ -18,10 +18,9 @@ do
 done
 
 # Ok we're good to go!
-GITHUB_PASSWORD=$GITHUB_TOKEN
 mkdir -p target
 cd target
-git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/symphonyoss/ssf-metadata.git
+git clone https://$GITHUB_USER:$GITHUB_PASSWORD@github.com/symphonyoss/ssf-metadata.git
 cd ssf-metadata/tools/metadata-tool
 lein deps
 lein run -- email-active-projects-with-unactioned-prs-report email-inactive-projects-report

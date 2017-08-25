@@ -18,9 +18,10 @@ do
 done
 
 # Ok we're good to go!
-mkdir target
+GITHUB_PASSWORD=$GITHUB_TOKEN
+mkdir -p target
 cd target
-git clone https://$GITHUB_TOKEN@github.com/symphonyoss/ssf-metadata.git
+git clone https://$GITHUB_USER:$GITHUB_TOKEN@github.com/symphonyoss/ssf-metadata.git
 cd ssf-metadata/tools/metadata-tool
 lein deps
 lein run -- email-active-projects-with-unactioned-prs-report email-inactive-projects-report

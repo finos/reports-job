@@ -23,9 +23,9 @@ env:
     # Encrypted SMTP_PASSWORD
     - secure: "O6oWiavq5l3C5Mx+ZzGKpHQO97OWglRSMPm4jw2MobRTdUP/p8eDUvt7RUkHszywPcFpakZLKBOP0t2qdzcGH6bxFLVNmnU8jQaGBz4fprMui6ueQNEVw2buJhikptbWaM2GZSCWmpg11uUbBHiCPBRKqCBFd8KR6Jf/dpxe89TNERIw69dZ0XwpVJ7BzzRFQOASAo79fZZ2Y0zwnkwoKbCKIYcAq+7FpsDyoFaHcpAFJq+D6JCOzS5SEddozis5CAHm6HWmlPWc/ADQqRylnTCCTh5wx2e4XXZ0PUJVfg/K5m7jKpjR+l7ER/o5LmLrfUEwR8HLoSvAk8WTSU+TxRalJad2JJqfIiSIVW5oQjCdUQhSRh22XHc13Wfaf7+uTsNSePu518ZasQ/ySqLr5KsN2uWPagr6Db8n/CsrdChseIzLdRKcpjwxewGAnN0Jo8jWoSP7v+/8BsnPFLW9j+5cr6AQ8K3osQZSOi2azFH7e8lgzH0sdhBmp6GBqVeQ0q6cXEUExITINcEdsEwbeRIUPpHLgT5hDHK2cTGeeXUBII7wBTWakXDK9B5H3UUH6FTFwcgLDkMVJfnfBi4ETPYn65lGR+dPmUemOKiLYcY8++iBJ27whjTPCO5VmkEELbqfOjzLlW2TiOu7zonqj7hlm4B/99CH+NKNsU9KcWM="
     # The email address the reports will be sent to
-    - ESCO_EMAIL_ADDRESS=peter@symphony.foundation
+    - ESCO_EMAIL_ADDRESS=esco@symphony.foundation
 
 script: ./send-esco-reports.sh
 
-#notifications:
-#  webhooks: https://foundation.symphony.com/integration/v1/whi/simpleWebHookIntegration/58ae440fe4b0d18517ab5177/58af9f79e4b0d18517ab51a9
+notifications:
+  webhooks: https://foundation.symphony.com/integration/v1/whi/simpleWebHookIntegration/58ae440fe4b0d18517ab5177/58af9f79e4b0d18517ab51a9

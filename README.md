@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/symphonyoss/ssf-esco-reports.svg?branch=master)](https://travis-ci.org/symphonyoss/ssf-esco-reports)
+[![Build Status](https://travis-ci.org/symphonyoss/ssf-job-esco-reports.svg?branch=master)](https://travis-ci.org/symphonyoss/ssf-job-esco-reports)
 
 # SSF ESCo Reports
 

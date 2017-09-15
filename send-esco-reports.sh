@@ -22,4 +22,4 @@ cd target
 git clone https://$GITHUB_USER:$GITHUB_PASSWORD@github.com/symphonyoss/ssf-metadata.git
 cd ssf-metadata/tools/metadata-tool
 lein deps
-lein run -- email-active-projects-with-unactioned-prs-report email-inactive-projects-report
+lein run -- email-inactive-projects-report email-active-projects-with-unactioned-prs-report email-active-projects-with-unactioned-issues-report

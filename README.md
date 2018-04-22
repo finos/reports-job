@@ -1,12 +1,12 @@
-[![Build Status](https://travis-ci.org/symphonyoss/ssf-job-esco-reports.svg?branch=master)](https://travis-ci.org/symphonyoss/ssf-job-esco-reports)
+[![Build Status](https://travis-ci.com/finos/reports-job.svg?branch=master)](https://travis-ci.com/finos/reports-job)
 
-# SSF ESCo Reports
+# Reports Job
 
-This Foundation-internal repository contains the necessary instructions for Travis CI to be able to send the ESCo monthly reports (which are implemented elsewhere).  It is not intended for use outside of the Foundation, and is unlikely to be interesting, except as an example of how to "trick" Travis into being a more general scheduled task engine beyond builds.
+This Foundation-internal repository contains the necessary instructions for Travis CI to be able to send the periodic reports (which are implemented in the [metadata-tool](https://github.com/finos/metadata-tool)).  It is not intended for use outside of the Foundation, and is unlikely to be interesting, except as an example of how to use Travis as a general purpose scheduled task engine.
 
 ## License
 
-Copyright © 2017 Symphony Software Foundation
+Copyright © 2017 FINOS Foundation
 
 Distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 

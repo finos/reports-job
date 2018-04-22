@@ -6,7 +6,7 @@ if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
 fi
 
 # Check that we have all the necessary env vars (configured in .travis.yml)
-declare -a vars=(GITHUB_USER GITHUB_PASSWORD JIRA_USER JIRA_PASSWORD BITERGIA_USER BITERGIA_PASSWORD SMTP_USER SMTP_PASSWORD ESCO_EMAIL_ADDRESS)
+declare -a vars=(GITHUB_USER GITHUB_PASSWORD BITERGIA_USER BITERGIA_PASSWORD SMTP_USER SMTP_PASSWORD)
 
 for var_name in "${vars[@]}"
 do
@@ -19,7 +19,9 @@ done
 # Ok we're good to go!
 mkdir -p target
 cd target
-git clone https://$GITHUB_USER:$GITHUB_PASSWORD@github.com/symphonyoss/ssf-metadata.git
-cd ssf-metadata/tools/metadata-tool
+git clone https://$GITHUB_USER:$GITHUB_PASSWORD@github.com/finos/metadata-tool.git
+cd metadata-tool
 lein deps
-lein run -- email-inactive-projects-report email-active-projects-with-unactioned-prs-report email-active-projects-with-unactioned-issues-report
+# TODO: USE THIS ONCE EVERYTHING IS KNOWN TO BE WORKING!
+#lein run -- --email-override email-pmc-reports
+lein run -- email-pmc-reports

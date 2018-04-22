@@ -1,5 +1,5 @@
 ;
-; Copyright © 2017 Symphony Software Foundation
+; Copyright © 2017 FINOS
 ; SPDX-License-Identifier: Apache-2.0
 ;
 ; Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,11 +17,11 @@
 
 (defproject org.symphonyoss.symphony/ssf-job-esco-reports "0.1.0-SNAPSHOT"
   :description      "This placeholder project file is here only to prevent TravisCI from barfing."
-  :url              "https://github.com/symphonyoss/bot-unfurl"
+  :url              "https://github.com/finos/reports-job"
   :license          {:spdx-license-identifier "Apache-2.0"
                      :name                    "Apache License, Version 2.0"
                      :url                     "http://www.apache.org/licenses/LICENSE-2.0"}
-  :min-lein-version "2.7.0"
+  :min-lein-version "2.8.1"
   :dependencies     [
-                      [org.clojure/clojure "1.8.0"]
+                      [org.clojure/clojure "1.9.0"]
                     ])

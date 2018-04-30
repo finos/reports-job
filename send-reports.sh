@@ -1,7 +1,7 @@
 #!/bin/bash
 # Only run the build if it was triggered by Travis CI's cron facility
 if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
-    echo "This build was not triggered by cron - skipping."
+    echo "ℹ️ This build was not triggered by cron - skipping."
     exit 0
 fi
 
@@ -11,7 +11,7 @@ declare -a vars=(GITHUB_USER GITHUB_PASSWORD BITERGIA_USER BITERGIA_PASSWORD SMT
 for var_name in "${vars[@]}"
 do
   if [ -z "$(eval "echo \$$var_name")" ]; then
-    echo "Missing environment variable $var_name"
+    echo "⚠️ Missing environment variable $var_name - terminating."
     exit 1
   fi
 done

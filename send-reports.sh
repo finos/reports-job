@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# Ensure any non-zero exit terminates the script immediately
+set -e
+set -o pipefail
+
 # Only run the build if it was triggered by Travis CI's cron facility
 if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then
     echo "ℹ️ This build was not triggered by cron - skipping."
@@ -16,10 +21,31 @@ do
   fi
 done
 
+function uriencode()
+{
+  s="${1//'%'/%25}"
+  s="${s//' '/%20}"
+  s="${s//'"'/%22}"
+  s="${s//'#'/%23}"
+  s="${s//'$'/%24}"
+  s="${s//'&'/%26}"
+  s="${s//'+'/%2B}"
+  s="${s//','/%2C}"
+  s="${s//'/'/%2F}"
+  s="${s//':'/%3A}"
+  s="${s//';'/%3B}"
+  s="${s//'='/%3D}"
+  s="${s//'?'/%3F}"
+  s="${s//'@'/%40}"
+  s="${s//'['/%5B}"
+  s="${s//']'/%5D}"
+  printf %s "$s"
+}
+
 # Ok we're good to go!
 mkdir -p target
 cd target
-git clone https://$GITHUB_USER:$GITHUB_PASSWORD@github.com/finos/metadata-tool.git
+git clone https://$(uriencode ${GITHUB_USER}):(uriencode ${$GITHUB_PASSWORD})@github.com/finos/metadata-tool.git
 cd metadata-tool
 lein deps
 # TODO: USE THIS ONCE EVERYTHING IS KNOWN TO BE WORKING!

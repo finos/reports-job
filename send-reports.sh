@@ -45,7 +45,7 @@ function uriencode()
 # Ok we're good to go!
 mkdir -p target
 cd target
-git clone https://$(uriencode ${GITHUB_USER}):$(uriencode ${$GITHUB_PASSWORD})@github.com/finos/metadata-tool.git
+git clone https://$(uriencode ${GITHUB_USER}):$(uriencode ${GITHUB_PASSWORD})@github.com/finos/metadata-tool.git
 cd metadata-tool
 lein deps
 # TODO: USE THIS ONCE EVERYTHING IS KNOWN TO BE WORKING!

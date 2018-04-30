@@ -15,7 +15,7 @@
 ; limitations under the License.
 ;
 
-(defproject org.symphonyoss.symphony/ssf-job-esco-reports "0.1.0-SNAPSHOT"
+(defproject org.finos/reports-job "0.1.0-SNAPSHOT"
   :description      "This placeholder project file is here only to prevent TravisCI from barfing."
   :url              "https://github.com/finos/reports-job"
   :license          {:spdx-license-identifier "Apache-2.0"

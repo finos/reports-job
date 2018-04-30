@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/finos/reports-job.svg?branch=master)](https://travis-ci.com/finos/reports-job)
+[![Build Status](https://travis-ci.org/finos/reports-job.svg?branch=master)](https://travis-ci.org/finos/reports-job)
 
 # Reports Job
 

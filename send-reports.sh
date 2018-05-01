@@ -48,6 +48,4 @@ cd target
 git clone https://$(uriencode ${GITHUB_USER}):$(uriencode ${GITHUB_PASSWORD})@github.com/finos/metadata-tool.git
 cd metadata-tool
 lein deps
-# TODO: USE THIS ONCE EVERYTHING IS KNOWN TO BE WORKING!
-#lein run -- --email-override email-pmc-reports
-lein run -- email-pmc-reports
+lein run -- --email-override email-pmc-reports

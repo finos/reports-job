@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/finos/reports-job.svg?branch=master)](https://travis-ci.org/finos/reports-job)
 
+<img align="right" width="40%" src="https://www.finos.org/hubfs/FINOS/finos-logo/FINOS_Icon_Wordmark_Name_RGB_horizontal.png">
+
 # Reports Job
 
 This Foundation-internal repository contains the necessary instructions for Travis CI to be able to send the periodic reports (which are implemented in the [metadata-tool](https://github.com/finos/metadata-tool)).  It is not intended for use outside of the Foundation, and is unlikely to be interesting, except as an example of how to use Travis as a general purpose scheduled task engine.

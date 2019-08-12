@@ -5,10 +5,10 @@ set -e
 set -o pipefail
 
 echo "Travis event type is $TRAVIS_EVENT_TYPE"
-echo "Force run is $FORCE_RUN"
+echo "Force run is $TRAVIS_COMMIT_MESSAGE"
 
 # Only run the build if it was triggered by Travis CI's cron facility
-if [ "$TRAVIS_EVENT_TYPE" != "cron" ] && [[ $FORCE_RUN != "true"* ]]; then
+if [ "$TRAVIS_EVENT_TYPE" != "cron" ] && [[ $TRAVIS_COMMIT_MESSAGE != "FORCE_RUN"* ]]; then
     echo "ℹ️ This build was not triggered by cron - skipping."
     exit 0
 fi

@@ -1,8 +1,8 @@
 sudo: false
 language: clojure
 lein: 2.8.1
-jdk:
-  - oraclejdk8
+# jdk:
+#   - oraclejdk8
 
 env:
   global:

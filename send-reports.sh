@@ -54,4 +54,5 @@ git checkout master
 lein deps
 # TODO - fix this at metadata-tool level, should be an optional configuration
 touch ./meeting-crawler.edn
-lein run -- --email-override email-pmc-reports -m ./
+# lein run -- --email-override email-pmc-reports -m ./
+lein run -- email-pmc-reports -m ./

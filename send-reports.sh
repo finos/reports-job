@@ -50,5 +50,6 @@ mkdir -p target
 cd target
 git clone https://$(uriencode ${GITHUB_USER}):$(uriencode ${GITHUB_PASSWORD})@github.com/finos/metadata-tool.git
 cd metadata-tool
+git checkout master
 lein deps
 lein run -- --email-override email-pmc-reports

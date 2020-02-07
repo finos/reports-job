@@ -52,4 +52,6 @@ git clone https://$(uriencode ${GITHUB_USER}):$(uriencode ${GITHUB_PASSWORD})@gi
 cd metadata-tool
 git checkout master
 lein deps
-lein run -- --email-override email-pmc-reports
+# TODO - fix this at metadata-tool level, should be an optional configuration
+touch ./meeting-crawler.edn
+lein run -- --email-override email-pmc-reports -m ./
